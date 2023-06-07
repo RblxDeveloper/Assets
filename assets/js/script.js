@@ -158,19 +158,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-window.addEventListener('load', function() {
-  var noInternetContainer = document.getElementById('no-internet-container');
-
-  function updateOnlineStatus() {
-    if (navigator.onLine) {
-      noInternetContainer.style.display = 'none';
-    } else {
-      noInternetContainer.style.display = 'flex';
-    }
-  }
-
-  window.addEventListener('online', updateOnlineStatus);
-  window.addEventListener('offline', updateOnlineStatus);
-
-  updateOnlineStatus();
-});
+window.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+})
