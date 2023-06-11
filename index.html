@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/all.min.css">
   <link rel="stylesheet" href="./assets/css/style2.css">
+  <link rel="stylesheet" href="./assets/css/style1.css">
 
   <!--
     - google font link
@@ -28,6 +29,10 @@
 </head>
 
 <body>
+
+  <div class="loader_bg" id="loadingScreen">
+    <span class="loader"></span>
+  </div>
 
   <!--
     - #MAIN
@@ -48,10 +53,56 @@
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="">Roblox & Web Hub</h1>
+          <h1 class="name" title="Roblox & Web Hub">Roblox & Web Hub</h1>
 
-          <p class="title"><i class="fa-solid fa-hourglass" style="color: #ffdb70;"></i> Website Incomplete <b style="font-size: 9px;">v1.0</b></p>
+          <div style="display: flex; align-items: center;">
+            <p class="title" style="margin-right: 5px;">
+              <i class="fa-solid fa-hourglass" style="color: #ffdb70;"></i> Website Incomplete
+            </p>
+            <button class="title" data-cookie-action="show-dialog">
+              <i class="fa-solid fa-gear fa-lg" data-cookie-action="show-dialog"></i>
+            </button>
+          </div>          
         </div>
+
+        <dialog id="cookie-dialog" class="cookie flow-content" data-spacing="lg">
+          <div class="flow-content">
+            <h1 class="main-title" style="color: #fff; font-size: 24px;"><i class="fa-solid fa-gear"></i> General [Beta]</h1>
+            <p>Customize your experience effortlessly. Optimize everything to your liking. Easily modify your favorite preferences. With just a few taps, enable or disable different possibilities for the best experience.</p>
+            <!-- <button type="button" class="button" data-cookie-action="allow-all">Allow all</button> -->
+          </div>
+        
+          <form method="dialog" class="flow-content" id="cookie-form">
+            <h2 class="section-title">Manage Consent Preferences</h2>
+            <ul role="list" class="cookie-settings flow-content" data-spacing="xs">
+              <li>
+                <div class="cookie-setting" style="background-color: #4e4e4e; margin-bottom: 40px;">
+                  <i class="fa-brands fa-galactic-republic"></i>
+                  <p>Loading Screen</p>
+                  <div>
+                    <p class="text-secondary" style="color: #b2b2b2;">Always Active</p>
+                  </div>
+                </div>
+              </li>
+              <!-- <li>
+                <div class="cookie-setting" style="background-color: #4e4e4e;">
+                  <i class="fa-solid fa-plus"></i>
+                  <p>Functional Cookies</p>
+                  <div class="toggle">
+                    <input class="sr-only" type="checkbox" id="a" name="cookie" value="LoadingS" data-cookie />
+                    <label for="a">
+                      <span class="sr-only">Toggle Switch</span>
+                    </label>
+                  </div>
+                </div>
+              </li> -->
+            </ul>
+            <div class="flex-group">
+              <!-- <button type="button" class="button" data-cookie-action="reject-all">Reject all</button> -->
+              <button type="submit" class="button" style="margin: auto;">Close</button>
+            </div>
+          </form>
+        </dialog>
 
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
@@ -153,10 +204,6 @@
 
     </aside>
 
-
-
-
-
     <!--
       - #main-content
     -->
@@ -185,11 +232,11 @@
 
           <!-- <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
+          </li> -->
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Contact</button>
-          </li> -->
+          </li>
 
         </ul>
 
@@ -1031,19 +1078,19 @@
           <h2 class="h2 article-title">Contact</h2>
         </header>
 
-        <section class="mapbox" data-mapbox>
+        <!-- <section class="mapbox" data-mapbox>
           <figure>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
               width="400" height="300" loading="lazy"></iframe>
           </figure>
-        </section>
+        </section> -->
 
         <section class="contact-form">
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+          <form action="https://formspree.io/f/mqkjklvp" method="post" class="form" data-form>
 
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
@@ -1051,7 +1098,7 @@
               <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <textarea name="message" class="form-input" placeholder="Your Message (Report a Bug or Suggest a Feature)" required data-form-input></textarea>
 
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
@@ -1084,6 +1131,7 @@
   <script src="https://kit.fontawesome.com/2cdbb3976a.js" crossorigin="anonymous"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </body>
 

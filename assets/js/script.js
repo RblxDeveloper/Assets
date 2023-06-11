@@ -161,3 +161,100 @@ for (let i = 0; i < navigationLinks.length; i++) {
 window.addEventListener('contextmenu', function(e) {
   e.preventDefault();
 })
+
+setTimeout(function() {
+  $('.loader_bg').fadeToggle();
+}, 5000);
+
+const cookieDialog = document.getElementById("cookie-dialog");
+const cookieForm = document.getElementById("cookie-form");
+const cookiePreferences = document.querySelectorAll("[data-cookie]");
+const cookieActions = document.querySelectorAll("[data-cookie-action]");
+const { log } = console;
+
+cookieForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  // Get and log the result to the console
+  const formData = new FormData(e.target);
+  const chosenCookiePreferences = formData.getAll("cookie");
+  log(chosenCookiePreferences);
+
+  cookieDialog.close();
+});
+
+cookieActions.forEach((action) => {
+  action.addEventListener("click", (e) => {
+    switch (e.target.dataset.cookieAction) {
+      case "show-dialog":
+        cookieDialog.showModal();
+        break;
+      case "allow-all":
+        cookiePreferences.forEach((cookie) => {
+          cookie.checked = true;
+        });
+        break;
+      case "reject-all":
+        cookiePreferences.forEach((cookie) => {
+          cookie.checked = false;
+        });
+        break;
+      default:
+        break;
+    }
+  });
+});
+
+
+
+
+// const toggle = document.getElementById('a');
+// const loadingScreen = document.getElementById('loadingScreen');
+// const COOKIE_NAME = 'toggleState';
+// const COOKIE_EXPIRATION_DAYS = 365;
+// const LOADING_SCREEN_DURATION = 5000; // Duration in milliseconds
+
+// // Function to set a cookie
+// function setCookie(name, value, expirationDays) {
+//   const expirationDate = new Date();
+//   expirationDate.setDate(expirationDate.getDate() + expirationDays);
+//   document.cookie = `${name}=${value}; expires=${expirationDate.toUTCString()}; path=/`;
+// }
+
+// // Function to get the value of a cookie
+// function getCookie(name) {
+//   const cookieValue = document.cookie.match(`(^|;)\\s*${name}\\s*=\\s*([^;]+)`);
+//   return cookieValue ? cookieValue.pop() : '';
+// }
+
+// // Check the value of the toggle cookie and set the toggle state accordingly
+// const toggleState = getCookie(COOKIE_NAME);
+// if (toggleState === 'true') {
+//   toggle.checked = true;
+//   loadingScreen.style.display = 'none';
+// } else {
+//   toggle.checked = false;
+//   loadingScreen.style.display = 'flex'; // Use flex display to center the content
+//   loadingScreen.style.justifyContent = 'center'; // Center horizontally
+//   loadingScreen.style.alignItems = 'center'; // Center vertically
+//   setTimeout(() => {
+//     loadingScreen.style.display = 'none';
+//   }, LOADING_SCREEN_DURATION);
+// }
+
+// // Event listener to handle toggle changes
+// toggle.addEventListener('change', function() {
+//   if (toggle.checked) {
+//     loadingScreen.style.display = 'none';
+//   } else {
+//     loadingScreen.style.display = 'flex'; // Use flex display to center the content
+//     loadingScreen.style.justifyContent = 'center'; // Center horizontally
+//     loadingScreen.style.alignItems = 'center'; // Center vertically
+//     setTimeout(() => {
+//       loadingScreen.style.display = 'none';
+//     }, LOADING_SCREEN_DURATION);
+//   }
+
+//   // Store the toggle state in a cookie
+//   setCookie(COOKIE_NAME, toggle.checked, COOKIE_EXPIRATION_DAYS);
+// });
