@@ -32,6 +32,7 @@
 
   <div class="loader_bg" id="loadingScreen">
     <span class="loader"></span>
+    <p class="loader_text" id="tipText"></p>
   </div>
 
   <!--
@@ -62,20 +63,21 @@
             <button class="title" data-cookie-action="show-dialog">
               <i class="fa-solid fa-gear fa-lg" data-cookie-action="show-dialog"></i>
             </button>
-          </div>          
+          </div>
         </div>
 
         <dialog id="cookie-dialog" class="cookie flow-content" data-spacing="lg">
           <div class="flow-content">
-            <h1 class="main-title" style="color: #fff; font-size: 24px;"><i class="fa-solid fa-gear"></i> General [Beta]</h1>
-            <p>Customize your experience effortlessly. Optimize everything to your liking. Easily modify your favorite preferences. With just a few taps, enable or disable different possibilities for the best experience.</p>
+            <h1 class="main-title" style="color: #fff; font-size: 24px;"><i class="fa-solid fa-gear"></i> General</h1>
+            <p>Customize your experience effortlessly. Optimize everything to your liking. Easily modify your favorite
+              preferences. With just a few taps, enable or disable different possibilities for the best experience.</p>
             <!-- <button type="button" class="button" data-cookie-action="allow-all">Allow all</button> -->
           </div>
-        
+
           <form method="dialog" class="flow-content" id="cookie-form">
-            <h2 class="section-title">Manage Consent Preferences</h2>
+            <h2 class="section-title">Manage Your Preferences</h2>
             <ul role="list" class="cookie-settings flow-content" data-spacing="xs">
-              <li>
+              <!-- <li>
                 <div class="cookie-setting" style="background-color: #4e4e4e; margin-bottom: 40px;">
                   <i class="fa-brands fa-galactic-republic"></i>
                   <p>Loading Screen</p>
@@ -83,11 +85,11 @@
                     <p class="text-secondary" style="color: #b2b2b2;">Always Active</p>
                   </div>
                 </div>
-              </li>
-              <!-- <li>
-                <div class="cookie-setting" style="background-color: #4e4e4e;">
-                  <i class="fa-solid fa-plus"></i>
-                  <p>Functional Cookies</p>
+              </li> -->
+              <li>
+                <div class="cookie-setting" id="lS" style="background-color: #4e4e4e; margin-bottom: 15px;">
+                  <i class="fa-brands fa-galactic-republic"></i>
+                  <p class="loading"></p>
                   <div class="toggle">
                     <input class="sr-only" type="checkbox" id="a" name="cookie" value="LoadingS" data-cookie />
                     <label for="a">
@@ -95,7 +97,18 @@
                     </label>
                   </div>
                 </div>
-              </li> -->
+              </li>
+
+              <li>
+                <div class="cookie-setting" style="background-color: #4e4e4e; margin-bottom: 40px;">
+                  <i class="fa-brands fa-galactic-republic"></i>
+                  <p>Download Button</p>
+                  <div>
+                    <p class="text-secondary" style="color: #b2b2b2; font-weight: bold;">[Beta]</p>
+                  </div>
+                </div>
+              </li>
+
             </ul>
             <div class="flex-group">
               <!-- <button type="button" class="button" data-cookie-action="reject-all">Reject all</button> -->
@@ -258,11 +271,17 @@
 
         <section class="about-text">
           <p>
-             
+
           </p>
 
           <p>
-            Hello there! I'm a passionate individual deeply involved in the world of creativity and technology. My name is <b>DsPlayz</b>, and I specialize in Roblox Studio projects and web design. With a diverse skill set that includes HTML, CSS, JavaScript, Bootstrap, Lua, and Python, I have the ability to bring ideas to life in the digital realm. Whether you're looking for high-quality models, ready-to-use code snippets, or a captivating web design, I've got you covered. Feel free to reach out to me if you need assistance with anything related to these areas. Just send me your requirements or let me know what you're looking for, and I'll be more than happy to help you out!
+            Hello there! I'm a passionate individual deeply involved in the world of creativity and technology. My name
+            is <b>DsPlayz</b>, and I specialize in Roblox Studio projects and web design. With a diverse skill set that
+            includes HTML, CSS, JavaScript, Bootstrap, Lua, and Python, I have the ability to bring ideas to life in the
+            digital realm. Whether you're looking for high-quality models, ready-to-use code snippets, or a captivating
+            web design, I've got you covered. Feel free to reach out to me if you need assistance with anything related
+            to these areas. Just send me your requirements or let me know what you're looking for, and I'll be more than
+            happy to help you out!
           </p>
         </section>
 
@@ -561,55 +580,44 @@
           <h2 class="h2 article-title">Info & Updates</h2>
         </header>
 
-        <!-- <section class="timeline">
+        <section class="timeline">
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+              <i class="fa-regular fa-newspaper"></i>
             </div>
 
-            <h3 class="h3">Education</h3>
+            <h3 class="h3">Updates</h3>
           </div>
 
           <ol class="timeline-list">
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">University school of the arts</h4>
+              <h4 class="h4 timeline-item-title">Settings & Fixes Update</h4>
 
-              <span>2007 — 2008</span>
+              <span><b style="color: #fff;">Date: </b>20/10/2023</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                • Loading Screen Toggle Button
+                <br>
+                • Updates Section
+                <br>
+                • Download Button For Assets
+                <br>
+                • Contact Section
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">New york academy of art</h4>
+              <h4 class="h4 timeline-item-title">Website Publicity</h4>
 
-              <span>2006 — 2007</span>
-
-              <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
-                omnis..
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">High school of art and design</h4>
-
-              <span>2002 — 2004</span>
+              <span><b style="color: #fff;">Date: </b>6/10/2023</span>
 
               <p class="timeline-text">
-                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
-                magni dolores
-                eos.
+                Introducing the Launch Day of our public website, now accessible to everyone! Experience the freedom of utilizing our vast collection of high-quality assets, including Roblox assets and web design resources, completely free.
               </p>
 
             </li>
@@ -618,7 +626,7 @@
 
         </section>
 
-        <section class="timeline">
+        <!-- <section class="timeline">
 
           <div class="title-wrapper">
             <div class="icon-box">
@@ -841,36 +849,24 @@
                   <img src="./assets/images/plsdonate.png" style="background-color: #232527;" alt="Pls Donate Map" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Pls Donate Map</h3>
+              </a>
 
+              <div class="project-info">
+                <div class="project-header">
+                  <h3 class="project-title">Pls Donate Map</h3>
+                  <!-- <button class="titles project-icon" id="download1">
+                    <i class="fa-solid fa-download"></i>
+                  </button> -->
+                </div>
                 <p class="project-category">Roblox Studio</p>
-
-              </a>
+              </div>
             </li>
-
-            <!-- <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="https://via.placeholder.com/600x450/FFFFFF/FFDB70.png?text=600x450" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web Design</p>
-
-              </a>
-            </li> -->
 
           </ul>
 
         </section>
 
-      </article>    
+      </article>
 
 
 
@@ -1098,7 +1094,8 @@
               <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message (Report a Bug or Suggest a Feature)" required data-form-input></textarea>
+            <textarea name="message" class="form-input" placeholder="Your Message (Report a Bug or Suggest a Feature)"
+              required data-form-input></textarea>
 
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>

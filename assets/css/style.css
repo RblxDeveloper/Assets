@@ -7,6 +7,7 @@
   background-color: #121212;
   z-index: 9999;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -15,7 +16,6 @@
   width: 78px;
   height: 78px;
   border-radius: 50%;
-  display: inline-block;
   border-top: 3px solid #FFF;
   border-right: 3px solid transparent;
   box-sizing: border-box;
@@ -29,6 +29,12 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.loader_text {
+  margin-top: 30px;
+  color: #fff;
+  text-align: center;
 }
 
 :root {
@@ -319,6 +325,41 @@ main {
   width: max-content;
   padding: 3px 12px;
   border-radius: 8px;
+  transition: .2s linear;
+}
+
+.info-content .title:hover {
+  background-color: var(--jet);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+}
+
+.project-icon {
+  margin-right: 10px;
+}
+
+.titles {
+  color: var(--white-1);
+  background: var(--onyx);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+  width: max-content;
+  padding: 3px 12px;
+  border-radius: 8px;
+  transition: .2s linear;
+}
+
+.titles:hover {
+  background-color: var(--jet);
 }
 
 .info_more-btn {

@@ -130,12 +130,12 @@
     --toggle-offset: 4px;
   
     --toggle-outer-default: var(--clr-neutral-300);
-    --toggle-inner-default: #dcc203;
+    --toggle-inner-default: var(--clr-neutral-800);
     --toggle-border-default: var(--clr-neutral-400);
     
     --toggle-inner-active: var(--clr-neutral-300);
-    --toggle-outer-active: #e5c565;
-    --toggle-border-active: #e5c565;
+    --toggle-outer-active: var(--clr-neutral-800);
+    --toggle-border-active: var(--clr-neutral-800);
   
     --toggle-transition: 200ms ease-out;
   }

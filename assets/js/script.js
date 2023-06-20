@@ -158,13 +158,13 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-window.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
-})
+// window.addEventListener('contextmenu', function(e) {
+//   e.preventDefault();
+// });
 
-setTimeout(function() {
-  $('.loader_bg').fadeToggle();
-}, 5000);
+// setTimeout(function() {
+//   $('.loader_bg').fadeToggle();
+// }, 8000);
 
 const cookieDialog = document.getElementById("cookie-dialog");
 const cookieForm = document.getElementById("cookie-form");
@@ -205,56 +205,100 @@ cookieActions.forEach((action) => {
   });
 });
 
+  // Array of sentences
+  var sentences = [
+    "There Are Several of Web & Roblox Assets.",
+    "Effortless and Valuable Website.",
+    "It is convenient to reach out to the developers or creator.",
+    "Secure Website For All Users.",
+    "To ensure the safety of your eyes, opt for Dark Mode at all times.",
+    "Accessible across all devices."
+  ];
+
+  // Function to update the tip text
+  function updateTipText() {
+    var tipTextElement = document.getElementById("tipText");
+    var randomIndex = Math.floor(Math.random() * sentences.length);
+    tipTextElement.textContent = "TIP: " + sentences[randomIndex];
+  }
+
+  // Initial update
+  updateTipText();
+
+  // Update the tip text every 3 seconds
+  setInterval(updateTipText, 4000);
 
 
 
-// const toggle = document.getElementById('a');
-// const loadingScreen = document.getElementById('loadingScreen');
-// const COOKIE_NAME = 'toggleState';
-// const COOKIE_EXPIRATION_DAYS = 365;
-// const LOADING_SCREEN_DURATION = 5000; // Duration in milliseconds
+  const toggle = document.getElementById('a');
+const loadingScreen = document.getElementById('loadingScreen');
+const COOKIE_NAME = 'toggleState';
+const COOKIE_EXPIRATION_DAYS = 365;
+const LOADING_SCREEN_DURATION = 8000; // Duration in milliseconds
 
-// // Function to set a cookie
-// function setCookie(name, value, expirationDays) {
-//   const expirationDate = new Date();
-//   expirationDate.setDate(expirationDate.getDate() + expirationDays);
-//   document.cookie = `${name}=${value}; expires=${expirationDate.toUTCString()}; path=/`;
-// }
+// Function to set a cookie
+function setCookie(name, value, expirationDays) {
+  const expirationDate = new Date();
+  expirationDate.setDate(expirationDate.getDate() + expirationDays);
+  document.cookie = `${name}=${value}; expires=${expirationDate.toUTCString()}; path=/`;
+}
 
-// // Function to get the value of a cookie
-// function getCookie(name) {
-//   const cookieValue = document.cookie.match(`(^|;)\\s*${name}\\s*=\\s*([^;]+)`);
-//   return cookieValue ? cookieValue.pop() : '';
-// }
+// Function to get the value of a cookie
+function getCookie(name) {
+  const cookieValue = document.cookie.match(`(^|;)\\s*${name}\\s*=\\s*([^;]+)`);
+  return cookieValue ? cookieValue.pop() : '';
+}
 
-// // Check the value of the toggle cookie and set the toggle state accordingly
-// const toggleState = getCookie(COOKIE_NAME);
-// if (toggleState === 'true') {
-//   toggle.checked = true;
-//   loadingScreen.style.display = 'none';
-// } else {
-//   toggle.checked = false;
-//   loadingScreen.style.display = 'flex'; // Use flex display to center the content
-//   loadingScreen.style.justifyContent = 'center'; // Center horizontally
-//   loadingScreen.style.alignItems = 'center'; // Center vertically
-//   setTimeout(() => {
-//     loadingScreen.style.display = 'none';
-//   }, LOADING_SCREEN_DURATION);
-// }
+// Check the value of the toggle cookie and set the toggle state accordingly
+const toggleState = getCookie(COOKIE_NAME);
+if (toggleState === 'true') {
+  toggle.checked = true;
+  loadingScreen.style.display = 'flex'; // Show loading screen when enabled
+  loadingScreen.style.justifyContent = 'center'; // Center horizontally
+  loadingScreen.style.alignItems = 'center'; // Center vertically
+  setTimeout(() => {
+    loadingScreen.style.display = 'none';
+  }, LOADING_SCREEN_DURATION);
+} else {
+  toggle.checked = false;
+  loadingScreen.style.display = 'none'; // Hide loading screen when disabled
+}
 
-// // Event listener to handle toggle changes
-// toggle.addEventListener('change', function() {
-//   if (toggle.checked) {
-//     loadingScreen.style.display = 'none';
-//   } else {
-//     loadingScreen.style.display = 'flex'; // Use flex display to center the content
-//     loadingScreen.style.justifyContent = 'center'; // Center horizontally
-//     loadingScreen.style.alignItems = 'center'; // Center vertically
-//     setTimeout(() => {
-//       loadingScreen.style.display = 'none';
-//     }, LOADING_SCREEN_DURATION);
-//   }
+// Function to update the text based on the toggle state
+function updateText() {
+  const text = document.querySelector('.cookie-setting .loading');
+  if (toggle.checked) {
+    text.innerHTML = 'Loading Screen <b>Enabled</b>';
+  } else {
+    text.innerHTML = 'Loading Screen <b>Disabled</b>';
+  }
+}
 
-//   // Store the toggle state in a cookie
-//   setCookie(COOKIE_NAME, toggle.checked, COOKIE_EXPIRATION_DAYS);
-// });
+// Update the text on initial load
+updateText();
+
+// Event listener to handle toggle changes
+toggle.addEventListener('change', function() {
+  if (toggle.checked) {
+    // Close the cookie modal
+    const cookieDialog = document.getElementById('cookie-dialog');
+    cookieDialog.close();
+  }
+
+  if (toggle.checked) {
+    loadingScreen.style.display = 'flex'; // Show loading screen when enabled
+    loadingScreen.style.justifyContent = 'center'; // Center horizontally
+    loadingScreen.style.alignItems = 'center'; // Center vertically
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+    }, LOADING_SCREEN_DURATION);
+  } else {
+    loadingScreen.style.display = 'none'; // Hide loading screen when disabled
+  }
+
+  // Store the toggle state in a cookie
+  setCookie(COOKIE_NAME, toggle.checked, COOKIE_EXPIRATION_DAYS);
+
+  // Update the text based on the toggle state
+  updateText();
+});
