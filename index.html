@@ -17,8 +17,8 @@
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/all.min.css">
-  <link rel="stylesheet" href="./assets/css/style2.css">
   <link rel="stylesheet" href="./assets/css/style1.css">
+  <link rel="stylesheet" href="./assets/css/stylenotmain.css">
 
   <!--
     - google font link
@@ -26,6 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/2cdbb3976a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -58,7 +59,7 @@
 
           <div style="display: flex; align-items: center;">
             <p class="title" style="margin-right: 5px;">
-              <i class="fa-solid fa-hourglass" style="color: #ffdb70;"></i> Website Incomplete
+              <i class="fa-solid fa-circle-check" style="color: #ffdb70; padding-right: 2px;"></i> Safe & Secure Website
             </p>
             <button class="title" data-cookie-action="show-dialog">
               <i class="fa-solid fa-gear fa-lg" data-cookie-action="show-dialog"></i>
@@ -87,7 +88,7 @@
                 </div>
               </li> -->
               <li>
-                <div class="cookie-setting" id="lS" style="background-color: #4e4e4e; margin-bottom: 15px;">
+                <div class="cookie-setting" id="lS" style="background-color: #4e4e4e; margin-bottom: 40px;">
                   <i class="fa-brands fa-galactic-republic"></i>
                   <p class="loading"></p>
                   <div class="toggle">
@@ -99,15 +100,21 @@
                 </div>
               </li>
 
-              <li>
+              <!-- <li>
                 <div class="cookie-setting" style="background-color: #4e4e4e; margin-bottom: 40px;">
                   <i class="fa-brands fa-galactic-republic"></i>
                   <p>Download Button</p>
                   <div>
                     <p class="text-secondary" style="color: #b2b2b2; font-weight: bold;">[Beta]</p>
                   </div>
+                  <div class="toggle">
+                    <input class="sr-only" type="checkbox" id="b" name="cookie" value="Download" data-cookie />
+                    <label for="b">
+                      <span class="sr-only">Toggle Switch</span>
+                    </label>
+                  </div>
                 </div>
-              </li>
+              </li> -->
 
             </ul>
             <div class="flex-group">
@@ -125,9 +132,9 @@
 
       </div>
 
-      <!-- <div class="sidebar-info_more">
+      <div class="sidebar-info_more">
 
-        <div class="separator"></div>
+        <!-- <div class="separator"></div>
 
         <ul class="contacts-list">
 
@@ -187,33 +194,39 @@
 
           </li>
 
-        </ul>
+        </ul> -->
 
         <div class="separator"></div>
 
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
+            <a href="https://www.youtube.com/channel/UC_DJpsHEO8vaOS7VWSR1LYw" target="_blank" class="social-link">
+              <i class="fa-brands fa-youtube"></i>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
+            <a href="https://www.roblox.com/users/1561069702/profile#!/about" target="_blank" class="social-link">
+              <i class="fa-solid fa-user"></i>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
+            <a href="https://www.paypal.com/paypalme/DsPlayz" target="_blank" class="social-link">
+              <i class="fa-brands fa-paypal"></i>
             </a>
           </li>
+
+          <!-- <li class="social-item">
+            <a href="875776851488944178" target="_blank" class="social-link">
+              <i class="fa-brands fa-discord"></i>
+            </a>
+          </li> -->
 
         </ul>
-
-      </div> -->
+        
+      </div>
 
     </aside>
 
@@ -246,6 +259,10 @@
           <!-- <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Blog</button>
           </li> -->
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Redeem</button>
+          </li>
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Contact</button>
@@ -290,7 +307,7 @@
           - service
         -->
 
-        <!-- <section class="service">
+        <section class="service">
 
           <h3 class="h3 service-title">What i'm doing</h3>
 
@@ -320,16 +337,16 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
+                <h4 class="h4 service-item-title">Roblox Assets</h4>
 
                 <p class="service-item-text">
-                  High-quality development of sites at the professional level.
+                  High-quality development of Assets at a professional level.
                 </p>
               </div>
 
             </li>
 
-            <li class="service-item">
+            <!-- <li class="service-item">
 
               <div class="service-icon-box">
                 <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
@@ -359,11 +376,11 @@
                 </p>
               </div>
 
-            </li>
+            </li> -->
 
           </ul>
 
-        </section> -->
+        </section>
 
 
         <!--
@@ -594,16 +611,36 @@
 
             <li class="timeline-item">
 
+              <h4 class="h4 timeline-item-title">What's New & Staying Connected</h4>
+
+              <span><b style="color: #fff;">Date: </b>8/14/2023</span>
+
+              <p class="timeline-text">
+                • What I'm Doing <b style="color: #ffdb70;">Section</b>
+                <br>
+                • Safe & Secured Website for Users
+                <br>
+                • Bug Fixes
+                <br>
+                • Settings
+                <br>
+                • Redeem <b style="color: #ffdb70;">Section</b>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
               <h4 class="h4 timeline-item-title">Settings & Fixes Update</h4>
 
-              <span><b style="color: #fff;">Date: </b>20/10/2023</span>
+              <span><b style="color: #fff;">Date: </b>6/20/2023</span>
 
               <p class="timeline-text">
                 • Loading Screen Toggle Button
                 <br>
                 • Updates Section
                 <br>
-                • Download Button For Assets
+                • Download Button For Assets <b style="color: #fff;">Soon</b>
                 <br>
                 • Contact Section
               </p>
@@ -787,70 +824,70 @@
         <header>
           <h2 class="h2 article-title">Assets</h2>
         </header>
-
+      
         <section class="projects">
-
+      
           <ul class="filter-list">
-
+      
             <li class="filter-item">
               <button class="active" data-filter-btn>All</button>
             </li>
-
+      
             <li class="filter-item">
               <button data-filter-btn>Roblox Studio</button>
             </li>
-
+      
             <!-- <li class="filter-item">
               <button data-filter-btn>Web design</button>
             </li> -->
-
+      
           </ul>
-
+      
           <div class="filter-select-box">
-
+      
             <button class="filter-select" data-select>
-
+      
               <div class="select-value" data-selecct-value>Select category</div>
-
+      
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
               </div>
-
+      
             </button>
-
+      
             <ul class="select-list">
-
+      
               <li class="select-item">
                 <button data-select-item>All</button>
               </li>
-
+      
               <li class="select-item">
                 <button data-select-item>Roblox Studio</button>
               </li>
-
+      
               <!-- <li class="select-item">
                 <button data-select-item>Web design</button>
               </li> -->
-
+      
             </ul>
-
+      
           </div>
-
+      
           <ul class="project-list">
-
+      
             <li class="project-item  active" data-filter-item data-category="roblox studio">
               <a href="https://create.roblox.com/marketplace/asset/9851588592/Pls-Donate-Map" target="_blank">
-
+      
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
+      
                   <img src="./assets/images/plsdonate.png" style="background-color: #232527;" alt="Pls Donate Map" loading="lazy">
                 </figure>
-
+      
               </a>
-
+      
               <div class="project-info">
                 <div class="project-header">
                   <h3 class="project-title">Pls Donate Map</h3>
@@ -861,11 +898,11 @@
                 <p class="project-category">Roblox Studio</p>
               </div>
             </li>
-
+      
           </ul>
-
+      
         </section>
-
+      
       </article>
 
 
@@ -1064,6 +1101,34 @@
 
 
 
+
+      <article class="contact" data-page="redeem">
+
+        <header>
+          <h2 class="h2 article-title">Redeem</h2>
+        </header>
+
+        <section class="container">
+          <h3 class="h4 form-title">Redeem Codes in here</h3>
+          <div class="form">
+              <div class="input-wrapper">
+                  <input class="form-input" id="passwordInput" type="text" placeholder="Enter your Roblox's Username">
+                  <input class="form-input" id="scInput" type="text" placeholder="Enter your Code">
+              </div>
+              <div id="message"></div>
+              <div id="prize"></div>
+              <button id="redeemBtn">Redeem Code</button>
+          </div>
+        </section>
+  
+      <div id="toast" class="toast"></div>
+
+      </article>
+
+
+
+
+
       <!--
         - #CONTACT
       -->
@@ -1111,24 +1176,19 @@
     </div>
 
   </main>
+  
 
+<!-- Include necessary Firebase and other scripts -->
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/2cdbb3976a.js" crossorigin="anonymous"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script src="https://kit.fontawesome.com/2cdbb3976a.js" crossorigin="anonymous"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Your custom scripts -->
+<script src="./assets/js/script.js"></script>
+<script src="./assets/js/script2.js"></script>
 
 </body>
 
